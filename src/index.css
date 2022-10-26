@@ -9,6 +9,12 @@ body {
   margin: 0;
 }
 
+main {
+    padding: 36px;
+    width: 600px;
+    margin: 0 auto;
+}
+
 .container {
   width: 1000px;
   margin: 0 auto;
@@ -20,7 +26,7 @@ body {
   justify-content: center;
   height: 65px;
   background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
-  color: white;
+  color: #fff;
   padding: 20px;
 }
 
@@ -31,4 +37,27 @@ body {
 
 .header-title {
   font-size: 1.25rem;
+}
+
+.form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+}
+
+.form-input {
+  font-family: 'Nunito', sans-serif;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+}
+
+.form-button {
+  grid-column: 1 / -1;
+  font-family: 'Nunito', sans-serif;
+  border-radius: 5px;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }

@@ -61,3 +61,8 @@ main {
   border: none;
   cursor: pointer;
 }
+
+.meme-img{
+  width: 100%;
+  margin-top: 20px;
+}

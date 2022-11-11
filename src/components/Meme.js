@@ -20,7 +20,15 @@ const Meme = () => {
     setMeme(prevMeme => ({
       ...prevMeme,
       randomImage: url
-  }))
+    }))
+  }
+
+  function handleChange(e){
+    const {name, value} = e.target
+    setMeme(prevMeme => ({
+      ...prevMeme,
+      [name]: value
+    }))
   }
 
   return (
@@ -28,18 +36,22 @@ const Meme = () => {
       <form className='form'>
         <input 
           type="text" 
-          id="toptext" 
-          name="toptext" 
+          id="topText" 
+          name="topText" 
           placeholder='Type top text'
           className='form-input'
+          value={meme.topText}
+          onChange={handleChange}
         >
         </input>
         <input 
           type="text" 
-          id="bottomtext"
-          name="bottomtext" 
+          id="bottomText"
+          name="bottomText" 
           placeholder='Type bottom text'
           className='form-input'
+          value={meme.bottomText}
+          onChange={handleChange}
         >
         </input>
         <button onClick={getMemeImage} className='form-button'>Get a new meme image 🖼</button>
@@ -47,8 +59,8 @@ const Meme = () => {
 
       <div className="meme">
         <img src={meme.randomImage} className="meme-image" />
-        <h2 className="meme-text top">Top text</h2>
-        <h2 className="meme-text bottom">Bottom text</h2>
+        <h2 className="meme-text top">{meme.topText}</h2>
+        <h2 className="meme-text bottom">{meme.bottomText}</h2>
       </div>
     </main>
   )
